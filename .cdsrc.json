@@ -8,14 +8,14 @@
                         "password": "initial",
                         "ID": "risk.viewer@tester.sap.com",
                         "roles": [
-                            "RiskViewer"
+                            "Viewer"
                         ]
                     },
                     "risk.manager@tester.sap.com": {
                         "password": "initial",
                         "ID": "risk.manager@tester.sap.com",
                         "roles": [
-                            "RiskManager"
+                            "Manager"
                         ]
                     }
                 }

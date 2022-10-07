@@ -1,4 +1,4 @@
-namespace sap.ui.riskmanagement;
+namespace br.com.fiap.challenge.sap;
 using { managed } from '@sap/cds/common';
 
 entity Risks : managed {

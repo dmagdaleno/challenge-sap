@@ -114,13 +114,13 @@ resources:
     config:
       role-collections:
       - description: Manage Risks
-        name: RiskManager-${space}
+        name: Manager-${space}
         role-template-references:
-        - $XSAPPNAME.RiskManager
+        - $XSAPPNAME.Manager
       - description: View Risks
-        name: RiskViewer-${space}
+        name: Viewer-${space}
         role-template-references:
-        - $XSAPPNAME.RiskViewer
+        - $XSAPPNAME.Viewer
       tenant-mode: dedicated
       xsappname: cpapp-${space}
     path: ./xs-security.json

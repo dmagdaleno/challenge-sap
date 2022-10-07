@@ -12,7 +12,6 @@ module.exports = cds.service.impl(async function() {
     });
 
     this.on('UPDATE', 'ConfirmaPagto', async req => {
-        console.log(`Req: ${JSON.stringify(req.data)}`)
         return api.post('/challengeSap/sap/confirmaPagto', req.data)
     });
 

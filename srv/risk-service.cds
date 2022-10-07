@@ -1,15 +1,15 @@
-using {sap.ui.riskmanagement as my} from '../db/schema';
+using {br.com.fiap.challenge.sap as my} from '../db/schema';
 
 @path : 'service/challenge/sap'
 service RiskService {
     entity Risks @(restrict : [
         {
             grant : ['READ'],
-            to    : ['RiskViewer']
+            to    : ['Viewer']
         },
         {
             grant : ['*'],
-            to    : ['RiskManager']
+            to    : ['Manager']
         }
     ]) as projection on my.Risks;
 
@@ -18,11 +18,11 @@ service RiskService {
     entity Mitigations @(restrict : [
         {
             grant : ['READ'],
-            to    : ['RiskViewer']
+            to    : ['Viewer']
         },
         {
             grant : ['*'],
-            to    : ['RiskManager']
+            to    : ['Manager']
         }
     ]) as projection on my.Mitigations;
 
@@ -31,17 +31,17 @@ service RiskService {
     @readonly
     entity EnviaLote @(restrict : [{
         grant : ['READ'],
-        to    : ['RiskViewer', 'RiskManager']
+        to    : ['Viewer', 'Manager']
     }]) as projection on my.EnviaLote;
 
     entity ConfirmaPagto @(restrict : [
         {
             grant : ['READ'],
-            to    : ['RiskViewer']
+            to    : ['Viewer']
         },
         {
             grant : ['*'],
-            to    : ['RiskManager']
+            to    : ['Manager']
         }
     ]) as projection on my.ConfirmaPagto;
 }
