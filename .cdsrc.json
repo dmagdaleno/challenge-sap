@@ -4,16 +4,16 @@
             "passport": {
                 "strategy": "mock",
                 "users": {
-                    "risk.viewer@tester.sap.com": {
-                        "password": "initial",
-                        "ID": "risk.viewer@tester.sap.com",
+                    "fulano@challenge.sap.com": {
+                        "password": "senhadofulano",
+                        "ID": "fulano@challenge.sap.com",
                         "roles": [
                             "Viewer"
                         ]
                     },
-                    "risk.manager@tester.sap.com": {
-                        "password": "initial",
-                        "ID": "risk.manager@tester.sap.com",
+                    "sicrano@challenge.sap.com": {
+                        "password": "senhadosicrano",
+                        "ID": "sicrano@challenge.sap.com",
                         "roles": [
                             "Manager"
                         ]

@@ -2,7 +2,7 @@
 const cds = require('@sap/cds')
 
 /**
- * Implementation for Risk Management service defined in ./risk-service.cds
+ * Implementacao dos servicos que se integram a API de pagamentos criada para o Challenge SAP da Fiap
  */
 module.exports = cds.service.impl(async function() {
     const api = await cds.connect.to('API.Challenge.SAP');
@@ -13,16 +13,5 @@ module.exports = cds.service.impl(async function() {
 
     this.on('UPDATE', 'ConfirmaPagto', async req => {
         return api.post('/challengeSap/sap/confirmaPagto', req.data)
-    });
-
-    this.after('READ', 'Risks', risksData => {
-        const risks = Array.isArray(risksData) ? risksData : [risksData];
-        risks.forEach(risk => {
-            if (risk.impact >= 100000) {
-                risk.criticality = 1;
-            } else {
-                risk.criticality = 2;
-            }
-        });
     });
 });

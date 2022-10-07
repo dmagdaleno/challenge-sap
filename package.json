@@ -64,6 +64,9 @@
         },
         "auth": {
           "kind": "xsuaa"
+        },
+        "approuter": {
+          "kind": "cloudfoundry"
         }
       },
       "db": {
@@ -76,12 +79,10 @@
       "API.Challenge.SAP": {
         "kind": "rest",
         "model": "srv/external/API_CHALLENGE_SAP",
-        "[sandbox]": {
-          "credentials": {
-            "url": "https://api.openconnectors.trial.us10.ext.hana.ondemand.com/elements/api-v2",
-            "headers": {
-              "Authorization": "User VR+QvoIbln9yT2XZbd8wvRIwRfFpCnTzJk68IyjnRvc=, Organization aeb14d091730ab4d64d98bbdb60194af, Element LiYrKwsIioHlE0RSQdUYEAJAZ4bdUcqGLgwVbjv6KwA="
-            }
+        "credentials": {
+          "url": "https://api.openconnectors.trial.us10.ext.hana.ondemand.com/elements/api-v2",
+          "headers": {
+            "Authorization": "User VR+QvoIbln9yT2XZbd8wvRIwRfFpCnTzJk68IyjnRvc=, Organization aeb14d091730ab4d64d98bbdb60194af, Element LiYrKwsIioHlE0RSQdUYEAJAZ4bdUcqGLgwVbjv6KwA="
           }
         }
       }
